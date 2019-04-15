@@ -9,7 +9,6 @@ navLinks.addEventListener('mouseover', function (e) {
     e.target.style.color = '';
   }, 500)
 }, false);
-
 //------ 2
 const body = document.querySelector('body')
 body.addEventListener('keydown', function (e) {
@@ -24,7 +23,6 @@ body.addEventListener('keydown', function (e) {
   // dark background
   if (e.keyCode === 78) body.classList.toggle('night-mode')
 })
-
 //------ 3
 body.addEventListener('wheel', function (e) {
   e.target.style.fontSize = '22px'
@@ -48,3 +46,15 @@ const page = window
 page.addEventListener('load', function () {
   alert(`Press 'N' to toggle between night mode`)
 })
+//------ 6
+page.addEventListener('resize', () => {
+  console.log(`Window has been resized`)
+})
+//------ 7
+const paragraphs = document.querySelectorAll('p')
+paragraphs.forEach(p => {
+  p.addEventListener('click', e => {
+    e.target.style.color = 'purple'
+  })
+})
+//------ 8
